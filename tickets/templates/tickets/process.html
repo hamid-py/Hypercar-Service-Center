@@ -1,0 +1,20 @@
+ <div>
+     <li>Change oil queue: {{car_line.change_oil | length}}
+
+     </li>
+  </div>
+<div>
+    <li>Inflate tires queue: {{car_line.inflate_tires | length}}
+
+    </li>
+</div>
+<div>
+    <li>Get diagnostic queue: {{car_line.diagnostic | length}}
+
+    </li>
+</div>
+
+<form action="/processing" method="post">
+    {% csrf_token %}
+  <button type="submit">Process next</button>
+</form>

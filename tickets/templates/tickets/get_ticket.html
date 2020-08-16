@@ -1,0 +1,9 @@
+{% load to_and %}
+{% for i in ticket%}
+<li>
+    <a href="/get_ticket/{{i.lower | to_and}}">{{i}}</a>
+</li>
+{%endfor%}
+<li>
+    <a href="/get_ticket/diagnostic">Get diagnostic test</a>
+</li>
